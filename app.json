@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/account/account",
+    "pages/integralList/integralList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "selectedIconPath": "assets/img/tabBar/task1.png",
+        "iconPath": "assets/img/tabBar/task2.png",
+        "pagePath": "pages/index/index",
+        "text": "任务"
+      },
+      {
+        "selectedIconPath": "assets/img/tabBar/reward1.png",
+        "iconPath": "assets/img/tabBar/reward2.png",
+        "pagePath": "pages/logs/logs",
+        "text": "奖励"
+      },
+      {
+        "selectedIconPath": "assets/img/tabBar/account1.png",
+        "iconPath": "assets/img/tabBar/account2.png",
+        "pagePath": "pages/account/account",
+        "text": "个人"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

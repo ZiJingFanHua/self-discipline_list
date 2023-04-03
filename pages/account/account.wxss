@@ -1,0 +1,231 @@
+/* pages/account/account.wxss */
+.nav {
+  display: flex;
+  justify-content: left;
+  padding-top: 45rpx;
+  background-color: #3E7AE9;
+}
+.nav .setting {
+  width: 75rpx;
+  height: 75rpx;
+  margin-right: 170rpx;
+}
+.nav .setting .iconfont {
+  font-size: 75rpx;
+}
+
+.nav .title {
+  height: 75rpx;
+  line-height: 75rpx;
+  font-size: 42rpx;
+  color: white;
+}
+
+.top-background {
+width: 100%;
+height: 250rpx;
+position: relative;
+/* background: rgba(62, 122, 233, 1); */
+/* border-radius: 0  0 100% 100%; */
+}
+.background-setting {
+  width: 150%;
+  height: 250rpx;
+  left: -25%;
+  position:absolute;
+  background-color: rgba(62, 122, 233, 1);
+  border-radius: 0  0 142% 142%;
+  z-index: 1;
+}
+
+.account-img {
+  position:absolute;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+  left: 37%;
+  box-shadow: -8px 0px 4px 0px rgba(236, 232, 232, 0.25);
+  overflow: hidden;
+  z-index: 4;
+}
+.account-img image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.account-img-background {
+  width: 250rpx;
+  height: 230rpx;
+  left: 247rpx;
+  top: -15rpx;
+  position: absolute;
+  background-color: rgba(62, 122, 233, 1);
+  border-radius: 0 0 142% 142%;
+  z-index: 3;
+}
+.account-buttom-box {
+  position: absolute;
+  top: 124rpx;
+  left: 42rpx;
+width: 337px;
+height: 440rpx;
+border-radius: 20rpx;
+opacity: 1;
+background: rgba(245, 245, 245, 1);
+box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.7),inset 1px 1px 0px 0px rgba(255, 255, 255, 1),inset -1px -1px 0px 0px rgba(255, 255, 255, 1), -4px -4px 9px 0px rgba(255, 255, 255, 0.7), 4px 4px 8px 0px rgba(62, 122, 233, 0.3);
+z-index: 2;
+}
+
+.account-buttom-box .message {
+  margin-top: 100rpx;
+  display:flex;
+  justify-content: center;
+}
+.account-buttom-box .message  .name {
+  height: 48rpx;
+  line-height: 41rpx;
+  font-size: 40rpx;
+font-weight: 500;
+}
+.account-buttom-box .message .tag {
+  margin-left: 40rpx;
+width: 178rpx;
+height: 48rpx;
+opacity: 1;
+border-radius: 117rpx;
+text-align: center;
+color: white;
+background: rgba(62, 122, 233, 1);
+box-shadow:inset -0.5px -0.5px 0px 0px rgba(255, 255, 255, 1),inset 0.5px 0.5px 0px 0px rgba(255, 255, 255, 1), -2px -2px 4px 0px rgba(255, 255, 255, 1), 2px 2px 4px 0px rgba(62, 122, 233, 0.3);
+}
+.days {
+  margin-top: 10rpx;
+  text-align: center;
+}
+
+.account-buttom-box .boxs {
+  margin-top: 44rpx;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+}
+.account-buttom-box .boxs .box {
+  margin: 0 20rpx;
+}
+.account-buttom-box .top {
+width: 108rpx;
+height: 108rpx;
+opacity: 1;
+border-radius: 12rpx;
+padding-top: 12rpx;
+margin-bottom: 10rpx;
+background: rgba(245, 245, 245, 1);
+box-shadow: 0.5px 0.5px 2px 0px rgba(255, 255, 255, 0.7),inset -0.4px -0.4px 0px 0px rgba(255, 255, 255, 1),inset 0.4px 0.4px 0px 0px rgba(255, 255, 255, 1), -1.5px -1.5px 4px 0px rgba(255, 255, 255, 1), 1.5px 1.5px 4px 0px rgba(62, 122, 233, 0.3);
+}
+.account-buttom-box .top .icon {
+  margin: auto;
+  width: 46rpx;
+height: 46rpx;
+opacity: 1;
+}
+.account-buttom-box .top .icon .iconfont{
+  font-size: 46rpx;
+}
+.account-buttom-box .top .num {
+  text-align: center;
+}
+.news {
+  position: relative;
+  margin: auto;
+  margin-top: 400rpx;
+width: 337px;
+height: 53px;
+opacity: 1;
+background: rgba(245, 245, 245, 1);
+box-shadow: 0.7px 0.7px 2px 0px rgba(255, 255, 255, 0.7),inset -0.7px -0.7px 0px 0px rgba(255, 255, 255, 1),inset 0.7px 0.7px 0px 0px rgba(255, 255, 255, 1), -3px -3px 6px 0px rgba(255, 255, 255, 1), 3px 3px 6px 0px rgba(62, 122, 233, 0.3);
+
+}
+
+.news-box-background {
+  position:absolute;
+  top: -65rpx;
+  left: 40rpx;
+width: 130rpx;
+height: 130rpx;
+border-radius: 50%;
+background-color: white;
+}
+.news-box {
+  width: 110rpx;
+height: 110rpx;
+border-radius: 50%;
+margin: auto;
+background: rgba(245, 245, 245, 1);
+box-shadow:inset -0.5px -0.5px 0px 0px rgba(255, 255, 255, 1),inset 0.5px 0.5px 0px 0px rgba(255, 255, 255, 1), 1.5px 1.5px 3px 0px rgba(255, 255, 255, 1), 2px 2px 4px 0px rgba(62, 122, 233, 0.4);
+text-align: center;
+line-height: 110rpx;
+font-size: 28rpx;
+font-weight: 500;
+color: rgba(62, 122, 233, 1);
+}
+.reply {
+  display:flex;
+  flex-direction: row-reverse;
+  padding-top: 30rpx;
+}
+.reply .line {
+  border-right: 1rpx solid black;
+  margin-right: 60rpx;
+}
+.reply .buttom {
+    font-size: 20px;
+    margin-right: 60rpx;
+}
+
+.task-boxs {
+  margin-top: 40rpx;
+}
+
+.task-boxs .title {
+  width: 335px;
+  margin: auto;
+  color: rgba(62, 202, 252, 1);
+}
+
+.task-box {
+  margin: auto;
+  margin-top: 40rpx;
+  padding: 20rpx 30rpx;
+  width: 305px;
+height: 60px;
+opacity: 1;
+background: rgba(245, 245, 245, 1);
+border-radius: 10px;
+border: 2rpx solid rgba(2, 177, 252, 1);          
+display: flex;  
+justify-content: space-between;
+}
+.task-box .task-title {
+  font-size: 50rpx;
+font-weight: 400;
+color: rgba(62, 122, 233, 1);
+}
+
+.task-box .task-describe {
+  margin-top: 10rpx;
+} 
+.task-box .buttom {
+  margin-top: 30rpx;
+  width: 80px;
+  height: 30px;
+  opacity: 1;
+  border-radius: 15px;
+  background: rgba(111, 208, 253, 1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 18px;
+font-weight: 400;
+line-height: 30px;
+color: rgba(62, 122, 233, 1);
+}

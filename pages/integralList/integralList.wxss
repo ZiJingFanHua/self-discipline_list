@@ -1,0 +1,96 @@
+/* pages/integraList/integralList.wxss */
+.top {
+  position: relative;
+height: 190px;
+padding-top: 20rpx;
+opacity: 1;
+background: rgba(62, 122, 233, 1);
+}
+.top .title{
+  font-size: 50rpx;
+  color: white;
+}
+
+.top .message {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50rpx;
+}
+.top .message .integral {
+  font-size: 36px;
+  font-weight: 700;
+
+  color: rgba(231, 246, 246, 1);
+  text-align: left;
+}
+
+.top .message .buttom {
+  margin-top: 30rpx;
+  width: 80px;
+  height: 30px;
+  opacity: 1;
+  border-radius: 15px;
+  background: rgba(111, 208, 253, 1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 18px;
+font-weight: 400;
+line-height: 30px;
+color: rgba(62, 122, 233, 1);
+}
+
+.select-time {
+  height: 50rpx;
+  padding: 25rpx 0;
+  color: rgba(231, 246, 246, 1);
+}
+.select-time .time-picker {
+  padding-left: 50rpx;
+}
+.integral-type {
+  position:absolute;
+  display: flex;
+  justify-content: space-around;
+  left: 66rpx;
+  width: 311px;
+  height: 96px;
+  opacity: 1;
+  border-radius: 8px;
+  background: rgba(53, 189, 242, 1);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.integral-type .line {
+  height: 120rpx;
+  margin: 36rpx 0;
+  border-right: 1rpx solid white;
+}
+.integral-type .type{
+  margin-top: 20rpx;
+}
+.integral-type .type .title {
+  margin-bottom: 20rpx;
+}
+.integral-list {
+  margin-top: 150rpx;
+  padding: 0 50rpx;
+}
+.integral-box {
+display: flex;
+justify-content: space-between;
+border-bottom: 1rpx solid #E5E5E5;     
+}
+.integral-box .message .title{
+  font-size: 38rpx;
+  font-weight: 500;
+  margin-bottom: 15rpx;
+}
+.integral-box .message .time {
+  font-size: 12px;
+font-weight: 400;
+color: rgba(166, 166, 166, 1);
+margin-bottom: 15rpx;
+}
+.integral-box .vp-num {
+  margin-top: 40rpx;
+}

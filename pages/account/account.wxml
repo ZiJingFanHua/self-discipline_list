@@ -1,0 +1,78 @@
+<view class="nav">
+<view class="setting">
+  <i class="icon-shezhi iconfont"></i>
+</view>
+<view class="title">
+<text>个人界面</text>
+</view>
+</view>
+
+<view class="top-background">
+ <view class="background-setting">
+ </view>
+ <view class="account-img">
+ <image src="{{userInfo.avatarUrl}}" alt=""></image>
+ </view>
+ <view class="account-img-background"></view>
+ <view class="account-buttom-box">
+ <view class="message">
+ <view class="name">{{userInfo.name}}</view>
+ <view class="tag">自律王者</view>
+ </view>
+ <view class="days">坚持天数:{{userInfo.days}}</view>
+ <view class="boxs">
+ <view class="box" bindtap="goTo" data-type="integralList">
+ <view class="top">
+ <view class="icon"> <i class="icon-shezhi iconfont"></i></view>
+ <view class="num">13</view>
+ </view>
+ <view>积分</view>
+ </view>
+ <view class="box">
+ <view class="top">
+ <view class="icon"> <i class="icon-shezhi iconfont"></i></view>
+ <view class="num">13</view>
+ </view>
+ <view>积分</view>
+ </view>
+ <view class="box">
+ <view class="top">
+ <view class="icon"> <i class="icon-shezhi iconfont"></i></view>
+ <view class="num">13</view>
+ </view>
+ <view>积分</view>
+ </view>
+ <view class="box">
+ <view class="top">
+ <view class="icon"> <i class="icon-shezhi iconfont"></i></view>
+ <view class="num">13</view>
+ </view>
+ <view>积分</view>
+ </view>
+ </view>
+ </view>
+</view>
+
+
+<view class="news">
+<view class="news-box-background">
+<view class="news-box">消息</view>
+</view>
+<view class="reply">
+    <view class="buttom">回复</view>
+    <view class="line"></view>
+    <view class="buttom">信息</view>
+</view>
+</view>
+
+<view class="task-boxs">
+<view class="title">今日待完成:</view>
+
+<view class="task-box">
+<view>
+<view class="task-title">title</view>
+<view class="task-describe">describe</view>
+</view>
+<view class="buttom">去完成</view>
+</view>
+</view>

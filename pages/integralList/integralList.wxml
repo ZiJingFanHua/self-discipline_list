@@ -1,0 +1,41 @@
+<!--pages/integraList/integralList.wxml-->
+
+<view class="top">
+
+<view class="title">我的积分</view>
+<view class="message">
+<view class="integral">3541    vp</view>
+<view class="buttom">获得</view>
+</view>
+<view class="select-time">
+ <picker bindchange="bindPickerChange" mode = 'multiSelector' range="{{date}}" data-type="time" class="time-picker">
+ {{secTime}}
+ <i class="iconfont icon-xiala"></i>
+ </picker>
+ <view>
+ </view>
+</view>
+
+<view class="integral-type">
+  <view class="type">
+  <view class="title">收入</view>
+  <view>10000</view>
+  </view>
+  <view class="line"></view>
+  <view class="type">
+    <view class="title">花费</view>
+  <view>10000</view>
+  </view>
+</view>
+</view>
+
+
+<view class="integral-list">
+  <view class="integral-box">
+  <view class="message">
+  <view class="title">title</view>
+  <view class="time">time</view>
+  </view>
+  <view class="vp-num">-30vp</view>
+  </view>
+</view>
