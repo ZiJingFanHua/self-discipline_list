@@ -1,5 +1,5 @@
 <view class="nav">
-<view class="setting">
+<view class="setting" bindtap="goTo" data-type="setting">
   <i class="icon-shezhi iconfont"></i>
 </view>
 <view class="title">
@@ -10,7 +10,7 @@
 <view class="top-background">
  <view class="background-setting">
  </view>
- <view class="account-img">
+ <view class="account-img" bindtap="login">
  <image src="{{userInfo.avatarUrl}}" alt=""></image>
  </view>
  <view class="account-img-background"></view>

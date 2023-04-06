@@ -1,6 +1,7 @@
 /* pages/account/account.wxss */
 .nav {
   display: flex;
+  padding-bottom: 40rpx;
   justify-content: left;
   padding-top: 45rpx;
   background-color: #3E7AE9;
@@ -15,6 +16,7 @@
 }
 
 .nav .title {
+  margin-left: 40rpx;
   height: 75rpx;
   line-height: 75rpx;
   font-size: 42rpx;

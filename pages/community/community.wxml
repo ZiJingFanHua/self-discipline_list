@@ -1,0 +1,9 @@
+<view class="search-box">
+<input class="search" type="text" placeholder="搜索" 	confirm-type="search" bindinput="bindinput" bindconfirm="bindconfirm"/>
+</view>
+<view class="content">
+ <view class="content-nav">
+   <view id="hot" class="title active" bindtap="changeContent" data-type="hot">热门</view>
+   <view id="news" class="title" bindtap="changeContent" data-type="news">最新</view>
+ </view>
+</view>

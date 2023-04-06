@@ -1,9 +1,12 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/task/task",
     "pages/logs/logs",
     "pages/account/account",
-    "pages/integralList/integralList"
+    "pages/integralList/integralList",
+    "pages/setting/setting",
+    "pages/reward/reward",
+    "pages/community/community"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,13 +19,13 @@
       {
         "selectedIconPath": "assets/img/tabBar/task1.png",
         "iconPath": "assets/img/tabBar/task2.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/task/task",
         "text": "任务"
       },
       {
         "selectedIconPath": "assets/img/tabBar/reward1.png",
         "iconPath": "assets/img/tabBar/reward2.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/reward/reward",
         "text": "奖励"
       },
       {

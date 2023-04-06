@@ -1,0 +1,34 @@
+<view class="page">
+<view class="search-box">
+<input class="search" type="text" placeholder="搜索奖励" 	confirm-type="search" bindinput="bindinput" bindconfirm="bindconfirm"/>
+</view>
+<view class="reward-list">
+<view class="reward-box" wx:for="{{rewardList}}" bindtap="selectReward" data-index="{{index}}" wx:key="index">
+  <view class="reward">{{item.description}}</view>
+  <view class="integral">-{{item.exchangePoints}}</view>
+</view>
+</view>
+
+
+
+<view class="no">
+<view class="img" wx:if="{{noreward&&!nosign}}">
+<image src="../../assets/img/no.png"></image>
+<view class="title">
+没有奖励
+</view>
+</view>
+<view class="img" wx:if="{{nosign}}">
+<image src="../../assets/img/nosign.png"></image>
+<view class="title1">
+没有登录
+</view>
+</view>
+</view>
+
+<view class="btns">
+  <view class="add-task cir-btn" bindtap="addReward" wx:if="{{!nosign}}">
+    <i class="iconfont icon-jiahao"></i>
+  </view>
+</view>
+</view>

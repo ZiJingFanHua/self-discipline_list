@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "add-logo":"/component/addLogo/addLogo"
+  }
+}

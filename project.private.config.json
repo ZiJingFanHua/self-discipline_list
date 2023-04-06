@@ -11,7 +11,20 @@
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "pages/setting/setting",
+          "pathName": "pages/setting/setting",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/community/community",
+          "pathName": "pages/community/community",
+          "query": "",
+          "scene": null
+        }
+      ]
     }
   }
 }

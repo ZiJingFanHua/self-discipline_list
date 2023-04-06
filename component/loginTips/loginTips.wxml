@@ -1,0 +1,9 @@
+<!--component/loginTips/loginTips.wxml-->
+<!-- author 紫荆 -->
+<view class="login-tips" wx:if="{{show}}">
+<view class="close" bindtap="closeTips">
+ <i class="iconfont icon-cuowuguanbiquxiao-xianxingyuankuang"></i>
+</view>
+<view class="title">请登录</view>
+<button class="login-button" bindtap="login">登录</button>
+</view>

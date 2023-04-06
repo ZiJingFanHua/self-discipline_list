@@ -1,0 +1,56 @@
+/* component/loginTips/loginTips.wxss */
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cuowuguanbiquxiao-xianxingyuankuang:before {
+  font-size: 51rpx;
+  color: red;
+  content: "\e8e7";
+}
+
+.icon-geren:before {
+  content: "\e646";
+}
+
+.icon-jiangli:before {
+  content: "\e608";
+}
+
+.icon-renwulei:before {
+  content: "\e60d";
+}
+.login-tips{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100rpx;
+  padding: 20rpx 30rpx;
+  background-color: rgba(33, 33, 34, 0.65);
+  border-radius: 45rpx;
+  height: 50rpx;
+}
+.login-tips .close {
+  width: 50rpx;
+  height: 50rpx;
+}
+.login-tips  .title {
+  font-size: 42rpx;
+  line-height: 42rpx;
+  height: 50rpx;
+  color: white;
+}
+.login-button {
+  width: 130rpx !important;
+  height: 48rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: white;
+  border-radius: 24rpx;
+  background-color: #4BC293;
+}

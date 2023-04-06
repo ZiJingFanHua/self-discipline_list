@@ -1,0 +1,5 @@
+<!-- author 紫荆 -->
+<view class="add" bindtap="addNew">
+<view class="col"></view>
+<view class="row"></view>
+</view>

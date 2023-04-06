@@ -1,0 +1,17 @@
+<!--pages/addReward/addReward.wxml-->
+<view class="page">
+  <view class="reward-title">
+<view class="title">内容:</view>
+<input class="reward-input" type="text" placeholder="奖励"  bindinput="bindinput" data-type="title"/>
+</view>
+
+
+<view class="interge">
+<view class="title"> 消耗积分</view>
+<input data-type="integral" class="interge-input" type="number" bindinput="bindinput" placeholder="0" data-type="integral"/>
+</view>
+
+
+
+<button class="add-reward" bindtap="addReward"> 添加奖励</button>
+</view>

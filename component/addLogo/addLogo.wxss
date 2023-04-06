@@ -1,0 +1,26 @@
+/* component/addLogo/addLogo.wxss */
+.add {
+  position: fixed;
+  bottom: 50rpx;
+  right: 25rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background-color: skyblue;
+}
+.add .col {
+  position: absolute;
+  width: 6rpx;
+  height: 80rpx;
+  left: 47rpx;
+  top: 10rpx;
+  background-color: white;
+}
+.add .row {
+  position: absolute;
+  width: 80rpx;
+  height: 6rpx;
+  left: 10rpx;
+  top: 47rpx;
+  background-color: white;
+}

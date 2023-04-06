@@ -1,0 +1,49 @@
+<!--pages/addTask/addTask.wxml-->
+
+<view class="page">
+<view class="task-title">
+<view class="title">标题:</view>
+<input class="title-input" type="text" placeholder="准备做什么"  bindinput="bindinput" data-type="title"/>
+</view>
+<view class="dead-line">
+<view class="title">截止日期</view>
+<view class="date-btns">
+<view bindtap="changeLimtDate" data-type="nowDay" id="nowDay" class="{{activeTime == 'nowDay'?'activeTime':''}}">今天</view>
+<view bindtap="changeLimtDate" data-type="tomorrow" id="tomorrow" class="{{activeTime == 'tomorrow'?'activeTime':''}}">明天</view>
+<view class="custom {{activeTime == 'custom'?'activeTime':''}}" id="custom"><picker mode="date" start="2001-01-01" end="2100-01-01" bindchange="changeLimtDate" data-type="custom">{{customTime}} <i class="iconfont icon-xiala"></i></picker></view>
+<view bindtap="changeLimtDate" data-type="no" id="no" class="{{activeTime == 'no'?'activeTime':''}}">不设限</view>
+</view>
+</view>
+
+<view class="interge">
+<view class="title"> 获取积分</view>
+<input data-type="integral" class="interge-input" type="number" bindinput="bindinput" placeholder="0"/>
+</view>
+
+
+<view class="sub-task">
+<text>分割子任务</text>
+<i class="iconfont icon-xiangxi"></i>
+</view>
+<view class="sub-tasks">
+    <view class="task" wx:for="{{task.subTask}}" wx:key="item">
+        <view>{{item.description}}</view>
+        <i class="iconfont icon-cha" bindtap="deleteSubTask" data-type="index"></i>
+    </view>
+
+</view>
+<view class="add-sub-task">
+    <i class="iconfont icon-zirenwu"></i>
+    <input value="{{subTask}}" bindinput="bindinput" data-type="subTask" type="text" placeholder="子任务"/>
+    <view class="add" bindtap="addSubTask">添加</view>
+</view>
+
+
+<view class="details">
+      <view class="title">
+      描述
+      </view>
+      <textarea name="" id="" cols="30" rows="10" placeholder="描述" bindinput="bindinput" data-type="details"></textarea>
+</view>
+<button class="add-task" bindtap="addTask"> 添加任务</button>
+</view>

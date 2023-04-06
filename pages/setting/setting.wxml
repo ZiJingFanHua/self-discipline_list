@@ -1,0 +1,45 @@
+<!--pages/setting/setting.wxml-->
+<view class="setting">
+<view class="sublists">
+  <view class="list" data-type="aboutUs" bindtap="goToPage" data-type="aboutUs">
+  <view class="list-left">
+  <i class="iconfont icon-guanyuwomen"></i>
+  <view class="subtitle">关于我们</view>
+  </view>
+  <view class="list-right">
+    <i class="iconfont icon-xiangyoujiantou"></i>
+  </view>
+</view>
+<view class="list" data-type="aboutUs" bindtap="goToPage" data-type="aboutUs">
+  <view class="list-left">
+  <i class="iconfont icon-bangzhu"></i>
+  <view class="subtitle">帮助</view>
+  </view>
+  <view class="list-right">
+    <i class="iconfont icon-xiangyoujiantou"></i>
+  </view>
+</view>
+<view class="list" data-type="aboutUs" bindtap="goToPage" data-type="aboutUs">
+  <view class="list-left">
+  <i class="iconfont icon-wodefankui"></i>
+  <view class="subtitle">反馈</view>
+  </view>
+  <view class="list-right">
+    <i class="iconfont icon-xiangyoujiantou"></i>
+  </view>
+</view>
+<view class="list" data-type="aboutUs" bindtap="goToPage" data-type="aboutUs">
+  <view class="list-left">
+  <i class="iconfont icon-iconzhengli-"></i>
+  <view class="subtitle">检查更新</view>
+  </view>
+  <view class="list-right">
+  <text>已是最新版本</text>
+  </view>
+</view>
+
+</view>
+
+
+<button class="exit-login" bindtap="loginout">退出登录</button>
+</view>

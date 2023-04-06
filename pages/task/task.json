@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "login-tips": "/component/loginTips/loginTips",
+    "add-logo":"/component/addLogo/addLogo"
+  },
+  "navigationBarBackgroundColor": "#3E7AE9",
+  "navigationStyle":"custom"
+}

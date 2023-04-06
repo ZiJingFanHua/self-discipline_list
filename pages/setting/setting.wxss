@@ -1,0 +1,45 @@
+/* pages/setting/setting.wxss */
+.setting {
+  
+}
+.sublists {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30rpx;
+}
+.sublists .list {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40rpx;
+  margin-left: 60rpx;
+  margin-right: 50rpx;
+  padding-bottom: 40rpx;
+  font-size: 36rpx;
+  border-bottom: 1rpx solid rgba(119, 130, 138, 1);            
+
+}
+
+.sublists .list .list-left {
+  display: flex;
+  justify-content: left;
+}
+.sublists .list  i {
+  font-size: 46rpx;
+  line-height: 54rpx;
+}
+.sublists .list .list-left .subtitle {
+  margin-left: 25rpx;
+}
+.sublists .list .list-right text {
+  font-size: 32rpx;
+  color: rgba(129, 138, 144, 1);
+}
+.sublists .list .list-right .iconfont {
+  font-size: 32rpx;
+}
+.exit-login{
+  margin-top: 40rpx;
+  width: 500rpx;
+  background: linear-gradient(to right,#e72336,#e77171);
+  color: white;
+}

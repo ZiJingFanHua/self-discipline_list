@@ -1,0 +1,99 @@
+<!--pages/task/task.wxml-->
+
+<!-- <view class="year-month">
+<view class="title" style="top:{{height}}px">
+<view class="select-date">2022-22</view>
+<view>NODE</view>
+</view>
+</view> -->
+<view class="page">
+<view class="date">
+      <view class="year-month" style="height:{{height}}px">
+    <view class="title" style="top:{{tt.top}}px;height:{{tt.height}}px;line-height:{{tt.height}}px">
+    <picker mode="date" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="select-date">{{active.year+'-'+active.month}} <i class="icon-xiangxi iconfont"></i>
+    </view>
+    </picker>
+    
+    <view class="name">NODE</view>
+    </view>
+    </view>
+  <scroll-view class="scroll-view-date" scroll-x="true" scroll-into-view="{{scroll}}">
+          <!-- <view class="scroll-item now active">2</view> -->
+          <view id="{{now.day == index+1&&now.year == active.year&&now.month == active.month?'now':''}}{{active.day == index+1&&active.day!=now.day?'active':''}}" class="scroll-item {{active.day == index+1?'active':''}} {{now.day == index+1&&now.year == active.year&&now.month == active.month?'now':''}}" wx:for="{{days}}" wx:key="item" bindtap="changedata" data-index="{{index}}">
+          {{index+1}}
+          </view>
+          
+   </scroll-view>
+</view>
+
+<view class="task" style="padding-top:{{height+50}}px">
+  <view class="task-box" wx:for="{{tasklsit}}" wx:key="index">
+  <view class="main-task">
+          <view class="select-box" bindtap="edittask" data-index="{{index}}" data-type="main" data-task="main"></view>
+        <!-- <view class="selected-box" wx:if="{{item.status == 1}}" bindtap="edittask" data-index="{{index}}" data-type="cancel" data-task="main"></view> -->
+        <view class="title">{{item.title}}</view>
+        <view class="integral">{{item.rewardPoints}}</view>
+  </view>
+   <view class="description">{{item.description}}</view>
+   <view class="line" wx:if="{{item.subtasks[0]}}"></view>
+  <view class="subtask" wx:for="{{item.subtasks}}" wx:key="childindex" wx:for-index="childindex">
+        <view class="circle" wx:if="{{item.status == 0}}" data-task="sub" data-type="sub" bindtap="edittask" data-index="{{index}}" data-childindex="{{childindex}}">
+        </view>
+        <view class="circle selected" wx:if="{{item.status == 1}}">
+        </view>
+        <view class="subtask-title {{item.status ==1?'complited':''}}">
+        {{item.description}}
+        </view>
+  </view>
+    
+  </view>
+  <view class="task-box" wx:for="{{completedTaskList}}" wx:key="index">
+  <view class="main-task">
+          <view class="selected-box" ></view>
+        <!-- <view class="selected-box" wx:if="{{item.status == 1}}" bindtap="edittask" data-index="{{index}}" data-type="cancel" data-task="main"></view> -->
+        <view class="title complited">{{item.title}}</view>
+        <view class="integral">{{item.rewardPoints}}</view>
+  </view>
+   <view class="description complited">{{item.description}}</view>
+   <view class="line" wx:if="{{item.subtasks[0]}}"></view>
+  <view class="subtask" wx:for="{{item.subtasks}}" wx:key="childindex" wx:for-index="childindex">
+        <view class="circle" wx:if="{{item.status == 0}}" data-task="sub" data-type="sub" bindtap="edittask" data-index="{{index}}" data-childindex="{{childindex}}">
+        </view>
+        <view class="circle selected" wx:if="{{item.status == 1}}">
+        </view>
+        <view class="subtask-title complited">
+        {{item.description}}
+        </view>
+  </view>
+    
+  </view>
+</view>
+
+
+<view class="btns">
+  <view class="re-now cir-btn" wx:if="{{active.day!=now.day}}" bindtap="backNow">
+    <i class="iconfont icon-fanhui"></i>
+  </view>
+  <view class="add-task cir-btn" bindtap="addNewTask" wx:if="{{active.day>=now.day&&!nosign}}">
+    <i class="iconfont icon-jiahao"></i>
+  </view>
+</view>
+
+<view class="no">
+<view class="img" wx:if="{{notask&&!nosign}}">
+<image src="../../assets/img/no.png"></image>
+<view class="title">
+没有任务
+</view>
+</view>
+<view class="img" wx:if="{{nosign}}">
+<image src="../../assets/img/nosign.png"></image>
+<view class="title1">
+没有登录
+</view>
+</view>
+</view>
+</view>
+
+
