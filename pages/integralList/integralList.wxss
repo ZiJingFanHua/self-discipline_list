@@ -6,8 +6,9 @@ padding-top: 20rpx;
 opacity: 1;
 background: rgba(62, 122, 233, 1);
 }
-.top .title{
+.top>.title{
   font-size: 50rpx;
+  margin-left: 50rpx;
   color: white;
 }
 
@@ -67,9 +68,12 @@ color: rgba(62, 122, 233, 1);
 }
 .integral-type .type{
   margin-top: 20rpx;
+  text-align: center;
 }
 .integral-type .type .title {
   margin-bottom: 20rpx;
+  font-size: 50rpx;
+  color: white;
 }
 .integral-list {
   margin-top: 150rpx;

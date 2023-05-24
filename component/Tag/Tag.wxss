@@ -1,0 +1,11 @@
+/* component/Tag/Tag.wxss */
+.tag {
+  margin-left: 40rpx;
+  width: 178rpx;
+  height: 48rpx;
+  opacity: 1;
+  border-radius: 117rpx;
+  text-align: center;
+  color: white;
+  box-shadow:inset -0.5px -0.5px 0px 0px rgba(255, 255, 255, 1),inset 0.5px 0.5px 0px 0px rgba(255, 255, 255, 1), -2px -2px 4px 0px rgba(255, 255, 255, 1), 2px 2px 4px 0px rgba(62, 122, 233, 0.3);
+}

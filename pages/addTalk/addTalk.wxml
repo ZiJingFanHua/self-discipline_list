@@ -1,0 +1,6 @@
+<!--pages/addTalk/addTalk.wxml-->
+
+<form bindsubmit="commit">
+  <textarea class="textarea" name="talk" id="" cols="100" rows="10" placeholder="有什么想分享或提问的东西？" 	auto-focus/>
+  <button class="submit" form-type="submit">发表</button>
+  </form>

@@ -10,9 +10,9 @@
 }
 @font-face {
   font-family: "iconfont"; /* Project id 3144565 */
-  src: url('//at.alicdn.com/t/c/font_3144565_1cggxeb4p3r.woff2?t=1680231382740') format('woff2'),
-       url('//at.alicdn.com/t/c/font_3144565_1cggxeb4p3r.woff?t=1680231382740') format('woff'),
-       url('//at.alicdn.com/t/c/font_3144565_1cggxeb4p3r.ttf?t=1680231382740') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_3144565_5wldr9nz02o.woff2?t=1680765306017') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3144565_5wldr9nz02o.woff?t=1680765306017') format('woff'),
+       url('//at.alicdn.com/t/c/font_3144565_5wldr9nz02o.ttf?t=1680765306017') format('truetype');
 }
 
 .iconfont {
@@ -21,6 +21,14 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-31zhuanfa:before {
+  content: "\e602";
+}
+
+.icon-dianzan:before {
+  content: "\ec7f";
 }
 
 .icon-shezhi:before {
@@ -114,6 +122,3 @@
 .icon-renwulei:before {
   content: "\e60d";
 }
-
-
-

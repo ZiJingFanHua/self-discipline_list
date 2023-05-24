@@ -4,8 +4,8 @@
 
 <view class="title">我的积分</view>
 <view class="message">
-<view class="integral">3541    vp</view>
-<view class="buttom">获得</view>
+<view class="integral">{{total}}    vp</view>
+<view class="buttom" bindtap="goTo">获得</view>
 </view>
 <view class="select-time">
  <picker bindchange="bindPickerChange" mode = 'multiSelector' range="{{date}}" data-type="time" class="time-picker">
@@ -17,25 +17,25 @@
 </view>
 
 <view class="integral-type">
-  <view class="type">
+  <view class="type" data-type = '1' bindtap="changeType">
   <view class="title">收入</view>
-  <view>10000</view>
+  <view>{{income}}</view>
   </view>
   <view class="line"></view>
-  <view class="type">
+  <view class="type"  data-type = '2' bindtap="changeType">
     <view class="title">花费</view>
-  <view>10000</view>
+  <view>{{expenditure}}</view>
   </view>
 </view>
 </view>
 
 
 <view class="integral-list">
-  <view class="integral-box">
+  <view class="integral-box" wx:for="{{integralList}}" wx:key="item">
   <view class="message">
-  <view class="title">title</view>
-  <view class="time">time</view>
+  <view class="title">{{item.title}}</view>
+  <view class="time">{{item.time}}</view>
   </view>
-  <view class="vp-num">-30vp</view>
+  <view class="vp-num">{{item.integral}}</view>
   </view>
 </view>

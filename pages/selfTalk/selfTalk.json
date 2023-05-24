@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Tag":"/component/Tag/Tag"
+  },
+  "navigationBarTitleText": "话题",
+  "navigationBarBackgroundColor": "#F0F1F5"
+}

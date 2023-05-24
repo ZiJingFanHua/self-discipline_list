@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "calendar":"/component/calendar/calendar",
+    "ec-canvas":"/component/ec-canvas/ec-canvas"
+  }
+}

@@ -1,7 +1,10 @@
 /* pages/community/community.wxss */
+page {
+ background-color:  rgba(240, 241, 245, 1);
+}
 .search-box {
   position: fixed;
-  background-color: white;
+  background-color:  rgba(240, 241, 245, 1);
   top: 0;
   left: 0;
   width: 100%;
@@ -16,10 +19,11 @@
   font-size: 30rpx;
   margin: 10rpx 40rpx;
   padding: 0 40rpx;
-  background-color: #f3f0f0;
+  background-color: white;
 }
 .content {
   display: flex;
+  flex-direction: column;
   margin-top: 100rpx;
 }
 .content-nav {
@@ -33,4 +37,85 @@
 }
 .content-nav .active {
   color: rgba(4, 24, 51, 1);
+}
+.talk-boxs {
+  margin-top: 40rpx;
+} 
+.talk-box {
+  background-color: white;
+  margin: 0 20rpx;
+  margin-bottom: 30rpx;
+  padding: 20rpx 20rpx;
+  border-radius: 20rpx;
+}
+.talk-box .user-message {
+  display: flex;
+}
+.talk-box .user-message .name {
+  height: 48rpx;
+  line-height: 118%;
+}
+.talk-box .user-message .message {
+  display: flex;
+  align-items: center;
+}
+.talk-box .user-message .user-img{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.talk-box .user-message .user-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.talk-box  .text-content{
+  margin: 20rpx 0;
+  max-height: 200rpx;
+}
+.talk-box .buttom-boxs {
+  display: flex;
+  justify-content: space-around;
+}
+.talk-box .buttom-boxs  .iconfont{
+  font-size: 44rpx;
+}
+.talk-box .buttom-boxs button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 40rpx;
+  font-weight: 500;
+  line-height: 100%;
+  height: 100%;
+  font-size: 44rpx;
+}
+.btns {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  bottom: 50rpx;
+  right: 70rpx;
+}
+
+.btns .cir-btn {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #1a837e;
+  border-radius: 50%;
+  margin-left: 20rpx;
+  box-shadow: 0 10rpx 8rpx 6rpx #ddddd7;
+}
+.btns .cir-btn i {
+  box-shadow: white;
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  color: white;
 }

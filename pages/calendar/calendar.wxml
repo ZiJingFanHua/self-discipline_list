@@ -1,0 +1,64 @@
+<view class="calender">
+<calendar signInList="{{signInList}}" bindchangeDate="changDate" bindchangeDay="changeDay"></calendar>
+</view>
+<view class="nav">
+<view class="selection {{select == 1 ? 'select':''}}" bindtap="change" data-index="1">
+当日详情
+</view>
+<view class="selection {{select == 2 ? 'select':''}}" bindtap="change" data-index="2">
+积分获取
+</view>
+<view class="selection {{select == 3 ? 'select':''}}" bindtap="change" data-index="3">
+坚持天数
+</view>
+<view class="selection {{select == 4 ? 'select':''}}" bindtap="change" data-index="4">
+任务详情
+</view>
+</view>
+<view class="contenter" >
+ <view class="day" wx:if="{{select == 1}}">
+ <view class="top">
+ <view class="title">已完成任务:</view>
+ <view class="switch" bindtap="switchDayType">切换</view>
+ </view>
+  
+ <view class="task-boxs" hidden="{{!dayType}}">
+ <view wx:if="{{taskList}}">
+  <view class="task-box" wx:for="{{taskList}}" wx:key="id">
+<view>
+<view class="task-title">{{item.title}}</view>
+<view class="task-describe">{{item.description}}</view>
+</view>
+<view class="buttom" bindtap="goTo" data-type="task">已完成</view>
+</view>
+ </view>
+<view wx:else>
+ 今日暂未完成任务
+</view>
+ </view>
+    <view class="ec-container" hidden="{{dayType}}">
+  <ec-canvas id="day-integral" canvas-id="day-integral" ec="{{ lazyEc }}"></ec-canvas>
+  </view>
+
+ </view>
+
+ <view class="integral" wx:if="{{select == 2}}">
+  <view class="ec-container">
+  <ec-canvas id="integral" canvas-id="integral" ec="{{ lazyEc }}"></ec-canvas>
+  </view>
+ </view>
+
+ <view class="days" wx:if="{{select == 3}}">
+  <view class="ec-container">
+    <ec-canvas id="integral" canvas-id="integral" ec="{{ lazyEc }}"></ec-canvas>
+  </view>
+</view>
+
+
+<view class="tasks" wx:if="{{select == 4}}">
+  <view class="ec-container">
+    <ec-canvas id="integral" canvas-id="integral" ec="{{ lazyEc }}"></ec-canvas>
+  </view>
+</view>
+</view>
+

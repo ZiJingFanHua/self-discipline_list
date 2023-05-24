@@ -14,6 +14,7 @@ const formatNumber = n => {
   return n[1] ? n : `0${n}`
 }
 const BaseUrl = 'http://localhost:8080'
+// const BaseUrl = 'http://192.168.179.126:8080'
 // request请求
 function request(path,data,method='post',header={
   "content-type":"application/json",

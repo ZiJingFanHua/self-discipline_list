@@ -10,44 +10,48 @@
 <view class="top-background">
  <view class="background-setting">
  </view>
- <view class="account-img" bindtap="login">
+ <view class="account-img" bindtap="isShowLogin">
  <image src="{{userInfo.avatarUrl}}" alt=""></image>
  </view>
  <view class="account-img-background"></view>
  <view class="account-buttom-box">
- <view class="message">
- <view class="name">{{userInfo.name}}</view>
- <view class="tag">自律王者</view>
+ <view class="message"  wx:if="{{userInfo.days > -1}}">
+ <view class="name">{{userInfo.nickName}}</view>
+ <!-- <view class="tag">自律王者</view> -->
+ <Tag days="{{userInfo.days}}"></Tag>
  </view>
- <view class="days">坚持天数:{{userInfo.days}}</view>
+ <view wx:else class="message">
+  未登录
+ </view>
+ <view class="days"  wx:if="{{userInfo.days > -1}}">坚持天数:{{userInfo.days}}</view>
  <view class="boxs">
- <view class="box" bindtap="goTo" data-type="integralList">
+ <view class="box" bindtap="goTo" data-type="calendar">
  <view class="top">
  <view class="icon"> <i class="icon-shezhi iconfont"></i></view>
- <view class="num">13</view>
+ <view class="num">--</view>
  </view>
- <view>积分</view>
+ <view>分析</view>
  </view>
- <view class="box">
+ <view class="box" bindtap="goTo" data-type="publish">
  <view class="top">
  <view class="icon"> <i class="icon-shezhi iconfont"></i></view>
- <view class="num">13</view>
+ <view class="num">{{userInfo.talkNums}}</view>
  </view>
- <view>积分</view>
+ <view>发表</view>
  </view>
- <view class="box">
+ <view class="box"  bindtap="goTo" data-type="reply">
  <view class="top">
  <view class="icon"> <i class="icon-shezhi iconfont"></i></view>
- <view class="num">13</view>
+ <view class="num">{{userInfo.comments}}</view>
  </view>
- <view>积分</view>
+ <view>回复</view>
  </view>
- <view class="box">
+ <view class="box"  bindtap="goTo" data-type="likes">
  <view class="top">
  <view class="icon"> <i class="icon-shezhi iconfont"></i></view>
- <view class="num">13</view>
+ <view class="num">{{userInfo.likes}}</view>
  </view>
- <view>积分</view>
+ <view>点赞</view>
  </view>
  </view>
  </view>
@@ -56,23 +60,30 @@
 
 <view class="news">
 <view class="news-box-background">
-<view class="news-box">消息</view>
+<view class="news-box" bindtap="goTo" data-type="integralList" data-set='0'>{{userInfo.total}}</view>
 </view>
 <view class="reply">
-    <view class="buttom">回复</view>
+    <view class="buttom" bindtap="goTo" data-type="integralList" data-set='1'>收入</view>
     <view class="line"></view>
-    <view class="buttom">信息</view>
+    <view class="buttom" bindtap="goTo" data-type="integralList" data-set='2'>支出</view>
 </view>
 </view>
 
 <view class="task-boxs">
 <view class="title">今日待完成:</view>
 
-<view class="task-box">
+<view class="task-box" wx:if="{{task.title}}">
 <view>
-<view class="task-title">title</view>
-<view class="task-describe">describe</view>
+<view class="task-title">{{task.title}}</view>
+<view class="task-describe">{{task.description}}</view>
 </view>
-<view class="buttom">去完成</view>
+<view class="buttom" bindtap="goTo" data-type="task">去完成</view>
 </view>
 </view>
+
+
+<page-container show="{{logining}}" class="login-tip" bind:clickoverlay="showLogin">
+<view class="welcome">欢迎加入 self-discipline</view>
+<button class="btn" bindtap="login"> 微信快捷登录 </button>
+<view class="cancel" bindtap="showLogin">取消</view>
+</page-container>

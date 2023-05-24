@@ -1,0 +1,28 @@
+<view class="title">
+回复列表
+</view>
+
+<view class="replay-boxs">
+<view class="reply-box" wx:for="{{replyList}}" wx:key="id" bindtap="goTo" data-id="{{item.id}}" data-subject="{{item.subjectId}}">
+<view class="user-img">
+  <image src="{{item.headPhoto}}"></image>
+</view>
+<view class="right">
+  <view class="content">
+<view class="message">
+<view>
+  {{item.nickName}}
+</view>
+<view class="time">
+{{item.time}}
+</view>
+</view>
+<view>{{item.content}}</view>
+</view>
+<view class="new" wx:if="{{item.look  == 0}}">
+·
+</view>
+</view>
+</view>
+</view>
+

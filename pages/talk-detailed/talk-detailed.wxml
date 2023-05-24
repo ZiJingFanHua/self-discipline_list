@@ -1,0 +1,126 @@
+<view class="talk-boxs">
+ <view class="talk-box">
+<view class="user-message">
+<view class="user-img">
+<image src="{{subject.headPhoto}}"></image>
+</view>
+<view class="message">
+  <view class="name">{{subject.nickName}}</view>
+  <Tag days="{{subject.days}}"></Tag>
+</view>
+</view>
+
+<view class="text-content">
+{{subject.content}}
+</view>
+
+<view class="buttom-boxs">
+<view>
+<button open-type="share">
+  <i class="icon-31zhuanfa iconfont"></i>
+</button>
+</view>
+<view>
+  <i class="icon-wodefankui iconfont"></i>
+  {{subject.commentsNum}}
+</view>
+<view class="likes"  wx:if="{{subject.isLike == 0}}" bindtap="toLike" data-id="{{subject.id}}" data-type="subject">
+  <i class="icon-dianzan iconfont"></i>
+  {{subject.likes}}
+</view>
+<view class="likes" wx:else bindtap="deleteLike" data-id="{{subject.id}}" data-type="subject">
+  <i class="icon-dianzan iconfont" style="color:red"></i>
+  {{subject.likes}}
+</view>
+</view>
+</view>
+ </view>
+
+ <view class="comment-contnet">
+ <view class="nav">
+ <view>评论</view>
+ <view class="buttom-boxs">
+ <view class="buttom {{type == 1?'active':''}}" bindtap="changeType" data-type="1">最新</view>
+ <view class="buttom {{type == 2?'active':''}}" bindtap="changeType" data-type="2">最热</view>
+ </view>
+ </view>
+ <view class="comment-box" wx:for="{{commentList}}" wx:key="id" bindtap="replay" data-id="{{item.id}}" data-name="{{item.nickName}}" data-user="{{item.commenterId}}">
+ <view class="user-message">
+  <view class="user-img">
+ <image src="{{item.headPhoto}}"></image>
+ </view>
+ <view class="user-name">
+ {{item.nickName}}
+ </view>
+ </view>
+
+ <view class="comment">
+{{item.content}}
+ </view>
+
+ <view class="comment-footer">
+ <view>
+  {{item.time}}
+ </view>
+
+ <view class="comment-each">
+  <!-- <view>
+  <i class="icon-wodefankui iconfont"></i>
+  {{item.likes}}
+</view> -->
+<view class="likes"  wx:if="{{item.islike == 0}}" catchtap="toLike" data-id="{{item.id}}" data-type="comment">
+  <i class="icon-dianzan iconfont"></i>
+  {{item.likes}}
+</view>
+<view class="likes" wx:else catchtap="deleteLike" data-id="{{item.id}}" data-type="comment">
+  <i class="icon-dianzan iconfont" style="color:red"></i>
+  {{item.likes}}
+</view>
+ </view>
+ </view>
+
+<view class="children-comment" wx:for="{{item.subjectVoList}}" wx:key="id">
+    <view class="comment-contnet">
+         <view class="message">
+     <image src="{{item.headPhoto}}"></image>
+     <view class="user">
+     <text>{{item.nickName}}</text><text style="margin: 0 20rpx;">@</text><text>{{item.beNickName}}</text>:
+     </view>
+     </view>
+     <view class="content">
+     {{item.content}}
+     </view>
+    </view>
+
+
+     <view class="children-comment-footer">
+      <view>
+  {{item.time}}
+ </view>
+<view class="likes"  wx:if="{{item.islike == 0}}" catchtap="toLike" data-id="{{item.id}}" data-type="comment">
+  <i class="icon-dianzan iconfont"></i>
+  {{item.likes}}
+</view>
+<view class="likes" wx:else catchtap="deleteLike" data-id="{{item.id}}" data-type="comment">
+  <i class="icon-dianzan iconfont" style="color:red"></i>
+  {{item.likes}}
+</view>
+ </view>
+</view>
+
+ </view>
+ </view>
+
+
+
+ <form bindreset="addComment">
+ <view class="reply">
+ <view wx:if="{{replay.name}}" bindtap="clean">
+ @{{replay.name}}
+ </view>
+ <view class="reply-text">
+  <input name="comment" bindinput="bindMessage"  placeholder="发表你的评论" type="text"/>
+ </view>
+ <button class="submit" form-type="reset">发表</button>
+ </view>
+</form>

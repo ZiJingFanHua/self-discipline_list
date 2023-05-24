@@ -10,7 +10,7 @@
 <view class="date">
       <view class="year-month" style="height:{{height}}px">
     <view class="title" style="top:{{tt.top}}px;height:{{tt.height}}px;line-height:{{tt.height}}px">
-    <picker mode="date" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <picker mode="date" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" value="{{active.year+'-'+active.month+'-'+active.day}}">
     <view class="select-date">{{active.year+'-'+active.month}} <i class="icon-xiangxi iconfont"></i>
     </view>
     </picker>

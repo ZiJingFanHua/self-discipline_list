@@ -1,0 +1,9 @@
+<view class="tag-box">
+<view class="tag" style="background-color:  #808080;" wx:if="{{days<10}}">自律先锋</view>
+<view class="tag" style="background-color: #00ff00;" wx:elif="{{days<30}}">自律达人</view>
+<view class="tag" style="background-color: #800080;" wx:elif="{{days<60}}">自律标兵</view>
+<view class="tag" style="background-color:  #ff8c00;"  wx:elif="{{days<100}}">自律高手</view>
+<view class="tag" style="background: linear-gradient(to right, #ff1493, #00bfff);"  wx:elif="{{days<150}}">自律宗师</view>
+<view class="tag" style="background-color: #c0c0c0;"  wx:elif="{{days<220}}">自律大师</view>
+<view class="tag" style="background-color: #ffd700;"  wx:elif="{{days<365}}">自律王者</view>
+</view>

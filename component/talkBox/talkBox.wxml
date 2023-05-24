@@ -1,0 +1,19 @@
+<view class="talk-box">
+<view class="user-message">
+<view class="user-img">
+<image url=""></image>
+</view>
+<view>
+  <view class="name">zijing</view>
+  <view class="title">自律王者</view>
+</view>
+</view>
+
+<view class="content">
+
+</view>
+
+<view class="buttom-boxs">
+
+</view>
+</view>

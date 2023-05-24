@@ -1,0 +1,39 @@
+<view class="talk-boxs">
+ <view class="talk-box" wx:for="{{talkList}}" wx:key="id">
+<view class="user-message">
+<view class="user-img">
+<image src="{{item.headPhoto}}"></image>
+</view>
+<view class="message">
+  <view class="name">{{item.nickName}}</view>
+  <Tag days="{{item.days}}"></Tag>
+</view>
+</view>
+
+<view class="text-content" bindtap="goTo" data-type="message" data-id="{{item.id}}">
+{{item.content}}
+</view>
+
+<view class="buttom-boxs">
+<view>
+  <button open-type="share" data-id="{{item.id}}">
+  <i class="icon-31zhuanfa iconfont"></i>
+</button>
+</view>
+<view>
+  <i class="icon-wodefankui iconfont"></i>
+  {{item.commentsNum}}
+</view>
+<view wx:if="{{item.isLike == 0}}" catchtap="toLike" data-id="{{item.id}}">
+  <i class="icon-dianzan iconfont"></i>
+  {{item.likes}}
+</view>
+
+<view wx:else catchtap="deleteLike" data-id="{{item.id}}">
+  <i class="icon-dianzan iconfont" style="color:red"></i>
+  {{item.likes}}
+</view>
+
+</view>
+</view>
+ </view>

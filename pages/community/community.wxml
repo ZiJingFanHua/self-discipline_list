@@ -3,7 +3,83 @@
 </view>
 <view class="content">
  <view class="content-nav">
-   <view id="hot" class="title active" bindtap="changeContent" data-type="hot">热门</view>
-   <view id="news" class="title" bindtap="changeContent" data-type="news">最新</view>
+   <view class="title {{type == 'hot'?'active':''}}" bindtap="changeContent" data-type="hot">热门</view>
+   <view class="title {{type == 'news'?'active':''}}" bindtap="changeContent" data-type="news">最新</view>
  </view>
+ <!-- <view class="talk-boxs">
+ <view class="talk-box">
+<view class="user-message">
+<view class="user-img">
+<image src="../../assets/img/tabBar/account1.png"></image>
+</view>
+<view>
+  <view class="name">zijing</view>
+  <view class="title">自律王者</view>
+</view>
+</view>
+
+<view class="text-content">
+  数组基本操作可以归纳为 增、删、改、查，需要留意的是哪些方法会对原数组产生影响，哪些方法不会
+
+下面对数组常用的操作方法做一个归纳
+</view>
+
+<view class="buttom-boxs">
+<view>
+  <i class="icon-31zhuanfa iconfont"></i>
+</view>
+<view>
+  <i class="icon-wodefankui iconfont"></i>
+  100
+</view>
+<view>
+  <i class="icon-dianzan iconfont"></i>
+  100
+</view>
+</view>
+</view>
+ </view> -->
+
+ <view class="talk-boxs">
+ <view class="talk-box" wx:for="{{talkList}}" wx:key="id">
+<view class="user-message">
+<view class="user-img">
+<image src="{{item.headPhoto}}"></image>
+</view>
+<view class="message">
+  <view class="name">{{item.nickName}}</view>
+  <Tag days="{{item.days}}"></Tag>
+</view>
+</view>
+
+<view class="text-content" bindtap="goTo" data-type="message" data-id="{{item.id}}">
+{{item.content}}
+</view>
+
+<view class="buttom-boxs">
+<view>
+  <!-- <i class="icon-31zhuanfa iconfont"></i> -->
+  <button open-type="share" data-id="{{item.id}}"><i class="icon-31zhuanfa iconfont"></i></button>
+</view>
+<view>
+  <i class="icon-wodefankui iconfont"></i>
+  {{item.commentsNum}}
+</view>
+<view wx:if="{{item.isLike == 0}}" catchtap="toLike" data-id="{{item.id}}">
+  <i class="icon-dianzan iconfont"></i>
+  {{item.likes}}
+</view>
+
+<view wx:else catchtap="deleteLike" data-id="{{item.id}}">
+  <i class="icon-dianzan iconfont" style="color:red"></i>
+  {{item.likes}}
+</view>
+</view>
+</view>
+ </view>
+ <view class="btns">
+  <view class="add-talk cir-btn" bindtap="goTo" data-type="addTalk" wx:if="{{!nosign}}">
+    <i class="iconfont icon-jiahao"></i>
+  </view>
+</view>
 </view>

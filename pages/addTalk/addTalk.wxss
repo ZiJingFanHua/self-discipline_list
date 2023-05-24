@@ -1,0 +1,11 @@
+/* pages/addTalk/addTalk.wxss */
+.textarea {
+  width: 100%;
+  height: 1000rpx;
+}
+.submit{
+  margin-top: 40rpx;
+  width: 500rpx;
+  background: linear-gradient(to right,#2653e6,#7d6be6);
+  color: white;
+}

@@ -8,7 +8,7 @@ Page({
   data: {
     height:'',
     tt:'',
-    days:0,
+    days:[],
     scroll:'',
     open:false,
     addNewTask:false,
@@ -43,6 +43,10 @@ Page({
         this.setData({
           nosign:true
         })
+        this.setData({
+          tasklsit:[],
+    completedTaskList:[],
+        });
        }else{
          this.getTaskList();
          this.setData({
@@ -101,23 +105,34 @@ Page({
     });
     console.log(this.data.active);
     console.log(this.data.now);
+    let days = [];
+    for(let i = 0;i<28;i++)
+        days.push(this.data.active.year+this.data.active.month+i);
+
+
     if(month ==1&&month ==3&&month ==5&&month ==7&&month ==8&&month ==10&&month ==12){
+      for(let i = 28;i<31;i++)
+      days.push(this.data.active.year+this.data.active.month+i);
       this.setData({
-        days : 31
+        days : days
       })
     }else if(month ==2){
       if(year%400==0||year%4!=0&&year%100!=0){
+        for(let i = 28;i<29;i++)
+        days.push(this.data.active.year+this.data.active.month+i);
         this.setData({
-          days : 29
+          days : days
         })
       }else{
         this.setData({
-          days : 28
+          days : days
         })
       }
     }else{
+      for(let i = 28;i<30;i++)
+      days.push(this.data.active.year+this.data.active.month+i);
       this.setData({
-        days : 30
+        days : days
       })
     };
   },
@@ -130,7 +145,7 @@ Page({
   else
   active.day =day;
   this.setData({
-    active:active
+    active:active,
   });
   this.getTaskList();
   },
@@ -303,12 +318,22 @@ Page({
  },
   //回到当前日期
   backNow(){
-    let active = this.data.active;
-    active = this.data.now
+
+    //     this.setData({
+    //   scroll:''
+    // })
+    // let active = this.data.active;
+    let active = {
+      year:this.data.now.year,
+      month:this.data.now.month,
+      day:this.data.now.day,
+    }
+    console.log(active);
     this.setData({
       active:active,
-      scroll:'now'
+      // scroll:'now'
     })
+    this.getTaskList();
     this.setData({
       scroll:'now'
     })
@@ -323,7 +348,6 @@ Page({
     }
     console.log(wx.getStorageSync('id'));
     util.request(url,data).then((res)=>{
-      console.log(res);
       this.setData({
         tasklsit:res.data.unCompletedTaskList,
         completedTaskList:res.data.completedTaskList
@@ -342,6 +366,20 @@ Page({
 
   //修改任务完成
   edittask(e){
+  
+    let date = new Date;
+    parseInt(this.data.active.month);
+    console.log(date.getMonth());
+    console.log(parseInt(this.data.active.month)!=date.getMonth());
+    if(parseInt(this.data.active.year)!=date.getFullYear()||parseInt(this.data.active.month)!=date.getMonth()+1||parseInt(this.data.active.day)!=date.getDate()){
+    wx.showToast({
+      title: '截止日期已过',
+      icon: 'error',  // 图标类型，默认success
+      duration: 1500  // 提示窗停留时间，默认1500ms
+    })
+    return null;
+  }
+
   let type = e.currentTarget.dataset.type;
   let index = e.currentTarget.dataset.index;
   let taskType = e.currentTarget.dataset.task;
@@ -367,33 +405,45 @@ Page({
     console.log(e.detail);
     let value = e.detail.value;
     let month = value.slice(5,7);
-    if(month ==1&&month ==3&&month ==5&&month ==7&&month ==8&&month ==10&&month ==12){
-      this.setData({
-        days : 31
-      })
-    }else if(month ==2){
-      if(year%400==0||year%4!=0&&year%100!=0){
-        this.setData({
-          days : 29
-        })
-      }else{
-        this.setData({
-          days : 28
-        })
-      }
-    }else{
-      this.setData({
-        days : 30
-      })
-    };
+    let days=[];
     this.setData({
       active: {
         year:value.slice(0,4),
         month:value.slice(5,7),
         day:value.slice(8,10)
       },
+    })
+    for(let i = 0;i<28;i++)
+    days.push(this.data.active.year+this.data.active.month+i);
+    if(month ==1&&month ==3&&month ==5&&month ==7&&month ==8&&month ==10&&month ==12){
+      for(let i = 28;i<31;i++)
+      days.push(this.data.active.year+this.data.active.month+i);
+      this.setData({
+        days : days
+      })
+    }else if(month ==2){
+      if(this.data.active.year%400==0||this.data.active.year%4!=0&&this.data.active.year%100!=0){
+        for(let i = 28;i<29;i++)
+        days.push(this.data.active.year+this.data.active.month+i);
+        this.setData({
+          days : days
+        })
+      }else{
+        this.setData({
+          days : days
+        })
+      }
+    }else{
+      for(let i = 28;i<30;i++)
+      days.push(this.data.active.year+this.data.active.month+i);
+      this.setData({
+        days : days
+      })
+    };
+    this.setData({
       scroll:'active',
     })
+    console.log(this.data.active);
     this.getTaskList();
   },
   /**
@@ -408,7 +458,8 @@ Page({
    */
   onShow: function () {
     this.setData({
-      tasklsit:[]
+      tasklsit:[],
+      completedTaskList:[]
     })
     if(!wx.getStorageSync('id')){
      this.setData({

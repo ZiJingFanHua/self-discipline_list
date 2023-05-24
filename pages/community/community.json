@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "社区"
+  "usingComponents": {
+    "Tag":"/component/Tag/Tag"
+  },
+  "navigationBarTitleText": "社区",
+  "navigationBarBackgroundColor": "#F0F1F5"
 }

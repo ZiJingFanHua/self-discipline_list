@@ -8,13 +8,23 @@ Page({
 
   },
 
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
   },
-
+  //退出登录
+  loginout(){
+    wx.setStorageSync('id','');
+    wx.setStorageSync('token','');
+    wx.setStorageSync('skey','');
+    wx.setStorageSync('userInfo','');
+    wx.reLaunch({
+      url: '../account/account',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

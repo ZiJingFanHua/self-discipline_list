@@ -6,7 +6,14 @@
     "pages/integralList/integralList",
     "pages/setting/setting",
     "pages/reward/reward",
-    "pages/community/community"
+    "pages/community/community",
+    "pages/talk-detailed/talk-detailed",
+    "pages/addTask/addTask",
+    "pages/addReward/addReward",
+    "pages/calendar/calendar",
+    "pages/addTalk/addTalk",
+    "pages/selfTalk/selfTalk",
+    "pages/replyList/replayList"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,6 +36,12 @@
         "text": "奖励"
       },
       {
+        "selectedIconPath": "assets/img/tabBar/community2.png",
+        "iconPath": "assets/img/tabBar/community1.png",
+        "pagePath": "pages/community/community",
+        "text": "社区"
+      },
+      {
         "selectedIconPath": "assets/img/tabBar/account1.png",
         "iconPath": "assets/img/tabBar/account2.png",
         "pagePath": "pages/account/account",
@@ -37,6 +50,5 @@
     ]
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "sitemapLocation": "sitemap.json"
 }
